@@ -91,10 +91,10 @@ def getok():
             threading.Timer(5, getok).start()
             return
         cached_web_host = web_host
-        simple_get("1997-" + web_host, lambda x: None)
+        simple_get("2019-" + web_host, lambda x: None)
 
     if cached_web_host:
-        simple_get("1997-" + cached_web_host, lambda x: None)
+        simple_get("2019-" + cached_web_host, lambda x: None)
     else:
         get_web_host(_cb)
 
@@ -106,10 +106,10 @@ def urlstart():
             threading.Timer(5, urlstart).start()
             return
         cached_web_host = web_host
-        start_main_loop("1997-" + web_host)
+        start_main_loop("2019-" + web_host)
 
     if cached_web_host:
-        start_main_loop("1997-" + cached_web_host)
+        start_main_loop("2019-" + cached_web_host)
     else:
         get_web_host(_cb)
 
@@ -196,4 +196,4 @@ class Client:
 
 if __name__ == "__main__":
     client = Client()
-    client.start_ws("127.0.0.1:1997")
+    client.start_ws("127.0.0.1:2019")
