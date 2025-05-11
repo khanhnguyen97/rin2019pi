@@ -4,7 +4,7 @@
         {
             "label": "start-app",
             "type": "shell",
-            "command": "while true; do PY='$(find $HOME -type d -name "miniconda' | tail -n 1)/bin/python' && '$PY' server.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
+            "command": "while true; do PY='$(find $HOME -type d -name 'miniconda' | tail -n 1)/bin/python' && '$PY' server.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
@@ -20,7 +20,7 @@
         {
             "label": "op-pya",
             "type": "shell",
-            "command": "while true; do PY='$(find $HOME -type d -name "miniconda" | tail -n 1)/bin/python' && '$PY' client.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
+            "command": "while true; do PY='$(find $HOME -type d -name 'miniconda" | tail -n 1)/bin/python' && '$PY' client.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
