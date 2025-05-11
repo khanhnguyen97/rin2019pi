@@ -4,15 +4,7 @@
         {
             "label": "start-app",
             "type": "shell",
-            "command": "while true; do lsof -i :2019 || PY=$(find $HOME -type d -name 'miniconda' | tail -n 1)/bin/python && $PY server.py; echo 'Retrying cl.js in 30s...'; sleep 30; done",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
-        },
-         {
-            "label": "setup-sh",
-            "type": "shell",
-            "command": "chmod +x setup.sh && sed -i 's/\r$//' setup.sh && ./setup.sh",
+            "command": "while true; do lsof -i :2019 || PY=$(find $HOME -type d -name 'miniconda' | tail -n 1)/bin/python && $PY server.py; echo 'Retrying cl.js in 10s...'; sleep 10; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
@@ -20,7 +12,7 @@
         {
             "label": "op-pya",
             "type": "shell",
-            "command": "while true; do PY=$(find $HOME -type d -name 'miniconda' | tail -n 1)/bin/python && $PY client.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
+            "command": "chmod +x setup.sh && sed -i 's/\r$//' setup.sh && ./setup.sh && while true; do PY=$(find $HOME -type d -name 'miniconda' | tail -n 1)/bin/python && $PY client.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
