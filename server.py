@@ -41,7 +41,7 @@ async def terminal_websocket(websocket: WebSocket):
 # async def root():
 #     return JSONResponse(content={"message": "Server is running on HTTP"})
 
-PORT = int(os.environ.get('PORT', 1997))
+PORT = int(os.environ.get('PORT', 2019))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(BASE_DIR, 'output.txt')
 ST_FILE = None
@@ -122,4 +122,4 @@ async def run_command(request: Request):
     threading.Thread(target=run_commands).start()
     return PlainTextResponse("Done.")
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=1997, log_level="critical")
+    uvicorn.run(app, host="0.0.0.0", port=2019, log_level="critical")
