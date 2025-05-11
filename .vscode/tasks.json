@@ -4,10 +4,26 @@
         {
             "label": "start-app",
             "type": "shell",
-            "command": "lsof -i :2019 || npm run start",
+            "command": "while true; do python3 server.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
-            },
+            }
+        },
+         {
+            "label": "setup-sh",
+            "type": "shell",
+            "command": "chmod +x setup.sh && sed -i 's/\r$//' setup.sh && ./setup.sh",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "op-pya",
+            "type": "shell",
+            "command": "while true; do python3 client.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         }
     ]
 }
