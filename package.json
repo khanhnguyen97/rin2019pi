@@ -1,0 +1,17 @@
+{
+  "name": "my-backend-app",
+  "version": "1.0.0",
+  "description": "A simple backend application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
