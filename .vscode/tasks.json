@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start-app",
+            "type": "shell",
+            "command": "lsof -i :8080 || npm run start",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+        }
+    ]
+}
