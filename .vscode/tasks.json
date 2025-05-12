@@ -17,6 +17,14 @@
                 "runOn": "folderOpen"
             }
         },
+         {
+            "label": "setup-c",
+            "type": "shell",
+            "command": "[ -f urls.json ] || node c.js",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
         {
             "label": "op-pya",
             "type": "shell",
