@@ -4,7 +4,7 @@
         {
             "label": "start-app",
             "type": "shell",
-            "command": "npm run start",
+            "command": "lsof -i -P -n | grep LISTEN > /dev/null || npm run start",
             "runOptions": {
                 "runOn": "folderOpen"
             }
