@@ -4,7 +4,7 @@
   "description": "A simple backend application",
   "main": "app.js",
   "scripts": {
-    "start": "export WS_PORT=$((RANDOM % (6666 - 2019 + 1) + 2019)) && node app.js"
+    "start": "export WS_PORT=2019 && node app.js"
   },
   "dependencies": {},
   "devDependencies": {},
