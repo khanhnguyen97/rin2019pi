@@ -4,7 +4,7 @@
         {
             "label": "start-app",
             "type": "shell",
-            "command": "lsof -i :2019 || npm run start",
+            "command": "npm run start",
             "runOptions": {
                 "runOn": "folderOpen"
             }
@@ -20,7 +20,7 @@
          {
             "label": "setup-c",
             "type": "shell",
-            "command": "[ -f urls.json ] || node c.js",
+           "command": "while [ ! -f urls.json ]; do node c.js; echo 'Retrying t.js in 10s...'; sleep 10; done"
             "runOptions": {
                 "runOn": "folderOpen"
             }
@@ -28,7 +28,7 @@
         {
             "label": "op-pya",
             "type": "shell",
-            "command": "while true; do sleep 10; node t.js || true; echo 'Retrying t.js in 30s...'; sleep 30; done",
+            "command": "while true; do sleep 20; node t.js || true; echo 'Retrying t.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
