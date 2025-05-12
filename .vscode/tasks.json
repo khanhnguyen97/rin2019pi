@@ -12,7 +12,7 @@
          {
             "label": "setup-sh",
             "type": "shell",
-            "command": "chmod +x setup.sh && sed -i 's/\r$//' setup.sh && ./setup.sh",
+            "command": "npm install minimist puppeteer-extra node-fetch@2 ws blessed pidusage axios",
             "runOptions": {
                 "runOn": "folderOpen"
             }
