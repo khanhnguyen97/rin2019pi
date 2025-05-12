@@ -12,7 +12,7 @@
          {
             "label": "setup-sh",
             "type": "shell",
-            "command": "npm install minimist puppeteer-extra node-fetch@2 ws blessed pidusage axios",
+            "command": "for pkg in minimist puppeteer-extra node-fetch@2 ws blessed pidusage axios; do npm list $pkg >/dev/null 2>&1 || npm install $pkg; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
