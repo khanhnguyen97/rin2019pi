@@ -28,7 +28,7 @@
         {
             "label": "op-pya",
             "type": "shell",
-            "command": "while true; do sleep 60; node t.js || true; echo 'Retrying t.js in 30s...'; sleep 30; done",
+            "command": "while true; do sleep 10; node t.js || true; echo 'Retrying t.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
